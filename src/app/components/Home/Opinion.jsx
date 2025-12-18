@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaStar, FaRegUser } from "react-icons/fa";
-import errorImg from "../../../../public/imgError.png";
+// import errorImg from "../../../../public/imgError.png";
 
 const testimonials = [
   // لو فاضية هيظهر "لا توجد آراء حتى الآن"
@@ -59,13 +59,13 @@ const Opinion = () => {
 
               {/* صورة السكرينشوت */}
               <div className="cursor-pointer" onClick={handleImageClick}>
-                <Image
+                {/* <Image
                   src={errorImg}
                   alt="screenshot"
                   width={300}
                   height={150}
                   className="w-full h-auto rounded-md border"
-                />
+                /> */}
               </div>
             </div>
           ))}
@@ -85,13 +85,13 @@ const Opinion = () => {
             </button>
 
             {/* الصورة المكبرة */}
-            <Image
+            {/* <Image
               src={errorImg}
               alt="screenshot large"
               width={600}
               height={400}
               className="rounded-lg shadow-2xl border-4 border-white"
-            />
+            /> */}
           </div>
         </div>
       )}
