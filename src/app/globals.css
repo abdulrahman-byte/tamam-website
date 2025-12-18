@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+    --Primary: #00a8e8;
+    --Secondary: #fdc500;
+
+}
+
+@theme primary {
+  --color-primary : var(--Primary);
+}
+@theme secondary {
+  --color-secondary : var(--Secondary);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 10px 20px;
+} 
+
+body {
+  background: white;
+  color: black;
+  font-family: var(--font-cairo), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  color: black;
+}
+
+/* UI VERS STYLE */
+
+/* FIRST STYLE "CARD" */
+
+/* From Uiverse.io by JesusRafaelNavaCruz */ 
+.container2 {
+  overflow: auto;
+  display: flex;
+  /* scroll-snap-type: x mandatory; */
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+
+  /* إخفاء الشريط */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE & Edge */
+}
+
+.card2 {
+  background: rgba(255, 255, 255, 0.25);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1rem;
+  width: 100%;
+}
+
+.container2:hover > :not(:hover) {
+  opacity: 0.2;
+}
+
+.title2 {
+  width: 100%;
+  display: inline-block;
+  word-break: break-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+
+
+
+
+
+/* UI VERS STYLE BUTTTON  */
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+.btn-animated {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  border: 1px solid #00a8e8;
+  color: #00a8e8;
+  background: transparent;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-animated:hover {
+  background: #00a8e8;
+  color: white;
+  box-shadow: 0 0 5px #00a8e8,
+              0 0 25px #00a8e8,
+              0 0 50px #00a8e8,
+              0 0 100px #00a8e8;
+}
+
+.btn-animated span {
+  position: absolute;
+  display: block;
+  bottom: 2px;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00a8e8);
+  animation: btn-anim1 2s linear infinite;
+}
+
+
+
+
+
+
+
+.marquee-wrapper {
+  overflow: hidden;
+  background: #00a8e8; /* من أصفر لأزرق */
+  direction: ltr; /* مهم للغة العربية */
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 100s linear infinite; /* أبطأ */
+}
+
+.marquee-content span {
+  margin: 0 2rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-100%); /* يبدأ من اليمين */
+  }
+  100% {
+    transform: translateX(100%); /* ينتهي عند اليسار */
+  }
+}
+
+
+/* لها علاقه ب تاخير وقت ارسال الفورم في فورم طلب الموقع */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.success-message {
+  animation: fadeIn 0.5s ease-in, pulse 2s infinite;
+}
