@@ -53,6 +53,7 @@ useEffect(() => {
     "/orderPage": "اطلب خدمة",
     "/OrderWebPage": "اطلب برمجة موقع",
     "/contactPage": "تواصل معنا",
+    "/joinPage": "انضم الان كتاجر",
   };
 
   const pathParts = pathname.split("/").filter(Boolean);
