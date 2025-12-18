@@ -35,7 +35,7 @@ const Footer = () => {
 
           {/* اللوجو */}
           <div className="flex justify-center md:justify-start">
-            <Image src="/logoTamam.png" alt="logo" width={100} height={100} />
+            <Image src="https://res.cloudinary.com/dacu2uuyw/image/upload/v1766026994/logoTamam_kq5swq.png" alt="logo" width={100} height={100} />
           </div>
 
           {/* أيقونات التواصل الاجتماعي */}
