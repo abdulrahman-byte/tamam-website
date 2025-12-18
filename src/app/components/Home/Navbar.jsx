@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import logo from "../../../../public/logo tamam.png";
+// import logo from "/logoTamam.png";
 import { NavLink, Breadcrumbs, Anchor } from "@mantine/core";
 import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -132,11 +132,11 @@ useEffect(() => {
         {/* LOGO + MENU BUTTON */}
         <div className="flex items-center justify-center lg:justify-center">
           <div className="hidden lg:flex justify-center w-full">
-            <Image src={logo} alt="logo" width={130} height={130} priority />
+            <Image src="/logoTamam.png" alt="logo" width={130} height={130} priority />
           </div>
 
           <div className="flex lg:hidden justify-between w-full items-center">
-            <Image src={logo} alt="logo" width={90} height={90} priority />
+            <Image src="/logoTamam.png" alt="logo" width={90} height={90} priority />
             <button
               className="cursor-pointer hover:text-blue-400 transition-colors duration-200"
               onClick={() => setMenuOpen(!menuOpen)}

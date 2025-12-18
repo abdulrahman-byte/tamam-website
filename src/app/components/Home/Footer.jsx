@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../../../../public/logo tamam.png";
 import {
   FaFacebookF,
   FaInstagram,
@@ -36,7 +35,7 @@ const Footer = () => {
 
           {/* اللوجو */}
           <div className="flex justify-center md:justify-start">
-            <Image src={logo} alt="logo" width={100} height={100} />
+            <Image src="/logoTamam.png" alt="logo" width={100} height={100} />
           </div>
 
           {/* أيقونات التواصل الاجتماعي */}
