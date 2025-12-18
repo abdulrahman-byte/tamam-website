@@ -58,7 +58,7 @@ const AboutUs = () => {
         {/* الصورة */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <Image
-            src="/AboutUsImg.png"
+            src="https://res.cloudinary.com/dacu2uuyw/image/upload/v1766027044/AboutUsImg_puudme.png"
             alt="من نحن"
             width={600}
             height={600}
